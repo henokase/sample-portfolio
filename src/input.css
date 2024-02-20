@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+    .transition-left {
+        transition: left 0.2s;
+    }
+    .transition-h1 {
+        transition-property: transform, opacity;
+        transition-duration: 1.5s;
+        transition-delay: 1s;
+    }
+    .transition-btn {
+        transition-property: left, transform, opacity;
+        transition-duration: 1.5s;
+        transition-delay: 2s;
+    }
+    .transition-op {
+        transition: opacity 1s;
+    }
+}
+
+.btn {
+    @apply px-4 py-2 w-fit text-xl max-md:text-base overflow-hidden relative hover:text-white font-medium text-blueish rounded-md border border-blueish;
+}
+.btn2 {
+    @apply px-4 py-2 w-fit text-xl max-md:text-base overflow-hidden relative hover:text-blueish font-bold text-white rounded-md border-2 border-white;
+}
+.btn-component {
+    @apply absolute z-10 -left-[100%] top-0 h-full transition-left group-hover:left-0 w-full bg-blueish;
+}
+.btn-component2 {
+    @apply absolute z-10 -left-[100%] top-0 h-full transition-left group-hover:left-0 w-full bg-white;
+}
